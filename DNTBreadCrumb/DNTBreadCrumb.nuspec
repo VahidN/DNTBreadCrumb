@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DNTBreadCrumb</id>
+    <version>$version$</version>
+    <authors>Vahid Nasiri</authors>
+    <owners>Vahid Nasiri</owners>
+    <licenseUrl>https://github.com/VahidN/DNTBreadCrumb/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/VahidN/DNTBreadCrumb/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DNTBreadCrumb Creates custom bread crumb definitions, based on Twitter Bootstrap 3.x features.</description>
+    <summary>DNTBreadCrumb Creates custom bread crumb definitions, based on Twitter Bootstrap 3.x features.</summary>
+    <language>en-US</language>
+    <tags>MVC breadcrumb bread crumb Twitter Bootstrap</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\DNTBreadCrumb.dll" target="lib\net45" />
+    <file src="bin\Release\DNTBreadCrumb.xml" target="lib\net45" />
+    <file src="..\MVCBreadCrumbTest\Views\Shared\_BreadCrumb.cshtml" target="Content\Views\Shared" />
+    <file src="readme.txt" target="" />
+  </files>
+</package>
