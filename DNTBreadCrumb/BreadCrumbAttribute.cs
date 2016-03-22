@@ -62,11 +62,6 @@ namespace DNTBreadCrumb
         /// <param name="filterContext"></param>
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            if (UsePreviousUrl)
-            {
-                Url = filterContext.HttpContext.Request.UrlReferrer.AbsolutePath;
-            }
-
             if (shouldIgnore(filterContext))
             {
                 return;
@@ -82,6 +77,11 @@ namespace DNTBreadCrumb
             if (UseDefaultRouteUrl || UseCurrentRouteUrl)
             {
                 url = getDefaultControllerActionUrl(filterContext);
+            }
+
+            if (UsePreviousUrl)
+            {
+                url = filterContext.HttpContext.Request.UrlReferrer.AbsolutePath;
             }
 
             filterContext.HttpContext.AddBreadCrumb(new BreadCrumb
