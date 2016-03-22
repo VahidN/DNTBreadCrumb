@@ -42,6 +42,11 @@ namespace DNTBreadCrumb
         public string Url { get; set; }
 
         /// <summary>
+        /// This property is useful when you need a back functionality. If it's true, the Url value will be previous Url using UrlReferrer
+        /// </summary>
+        public bool UsePreviousUrl { get; set; }
+
+        /// <summary>
         /// This property is useful for controller level bread crumbs. If it's true, the Url value will be calculated automatically from the DefaultRoute
         /// </summary>
         public bool UseDefaultRouteUrl { get; set; }
@@ -57,6 +62,11 @@ namespace DNTBreadCrumb
         /// <param name="filterContext"></param>
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
+            if (UsePreviousUrl)
+            {
+                Url = filterContext.HttpContext.Request.UrlReferrer.AbsolutePath;
+            }
+
             if (shouldIgnore(filterContext))
             {
                 return;
