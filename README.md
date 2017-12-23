@@ -35,3 +35,9 @@ public class HomeController : Controller
    }
 ```
 Please follow the `MVCBreadCrumbTest` sample for more scenarios.
+
+
+
+.NET Core Version:
+-----------------
+The current library is designed for ASP.NET MVC 5.x. Please use this package for .NET Core: [DNTBreadCrumb.Core](https://github.com/VahidN/DNTBreadCrumb.Core).

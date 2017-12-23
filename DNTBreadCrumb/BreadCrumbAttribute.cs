@@ -52,7 +52,7 @@ namespace DNTBreadCrumb
         public bool UseDefaultRouteUrl { get; set; }
 
         /// <summary>
-        /// This property is useful for controller level bread crumbs. If it's true, the Url value will be calculated automatically from the urrentRoute
+        /// This property is useful for controller level bread crumbs. If it's true, the Url value will be calculated automatically from the currentRoute
         /// </summary>
         public bool UseCurrentRouteUrl { get; set; }
 
